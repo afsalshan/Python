@@ -8,3 +8,4 @@ def greet():
 
 a = input("enter")
 print(a)
+added a new line here
