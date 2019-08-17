@@ -1,19 +1,20 @@
+from colr import color
 board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
 
 
 def board_draw():
-    print(board[0]+"|"+board[1]+"|"+board[2])
-    print(board[3]+"|"+board[4]+"|"+board[5])
-    print(board[6]+"|"+board[7]+"|"+board[8])
+    print(color(board[0]+"|"+board[1]+"|"+board[2],fore='yellow',back='red'))
+    print(color(board[3]+"|"+board[4]+"|"+board[5],fore='yellow',back='red'))
+    print(color(board[6]+"|"+board[7]+"|"+board[8],fore='yellow',back='red'))
 
 
 def switch_player():
     global player_no
     if player_no == 1:
-        print("turn of player o")
+        print(color("turn of player o",fore='red'))
         player_no = 0
     else:
-        print("turn of player x")
+        print(color("turn of player x",fore='green'))
         player_no = 1
 
 
@@ -82,8 +83,8 @@ def main():
 player_no = 1
 game_running = True
 main()
-# game _winner can be removed and integrated in game termination
+# game _winner can be removed and integrated in game termination -done
 # to do integrating game score
 # integrating ui
 # integrating face detection to alter the game result as administrator
-# colourize the output to distinguish
+# colourize the output to distinguish -done

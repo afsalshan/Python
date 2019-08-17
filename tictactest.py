@@ -1,2 +1,3 @@
-TGREEN ='\033[32m'
-print(TGREEN +"this is text ")
+
+from colr import color
+print(color("hello", fore= 'red'))
