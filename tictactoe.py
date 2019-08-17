@@ -37,41 +37,33 @@ def game_termination():
     # checking rows
     for i in (0, 3, 6):
         if board[i] == board[i+1] == board[i+2] == "x" or board[i] == board[i+1] == board[i+2] == "o":
+            if board[i] == "x":
+                print("x is the winner")
+            else:
+                print("o is the winner")
+
             game_running = False
     # checking coloumns
     for i in (0, 1, 2):
         if board[i] == board[i+3] == board[i+6] == "x" or board[i] == board[i+1] == board[i+2] == "o":
+            if board[i] == "x":
+                print("x is the winner")
+            else:
+                print("o is the winner")
             game_running = False
     # for checking corners
     if board[0] == board[4] == board[8] == "x" or board[0] == board[4] == board[8] == "o":
-        game_running = False
-    if board[2] == board[4] == board[6] == "x" \or board[2] == board[4] == board[6] == "o":
-        game_running = False
-
-
-def game_winner():
-
-    # checking rows
-    for i in (0, 3, 6):
-        if board[i] == board[i+1] == board[i+2] == "x":
+        if board[0] == "x":
             print("x is the winner")
-        if board[i] == board[i+1] == board[i+2] == "o":
-            print(" o is the winner")
-    # checking coloumns
-    for i in (0, 1, 2):
-        if board[i] == board[i+3] == board[i+6] == "x":
-            print("x is the winner")
-        if board[i] == board[i+1] == board[i+2] == "o":
+        else:
             print("o is the winner")
-    # for checking corners
-    if board[0] == board[4] == board[8] == "x":
-        print("x is the winner")
-    if board[0] == board[4] == board[8] == "o":
-        print("o is the winner")
-    if board[2] == board[4] == board[6] == "x":
-        print("x is the winner")
-    if board[2] == board[4] == board[6] == "o":
-        print("o is the winner")
+        game_running = False
+    if board[2] == board[4] == board[6] == "x" or board[2] == board[4] == board[6] == "o":
+        if board[2] == "x":
+            print("x is the winner")
+        else:
+            print("o is the winner")
+        game_running = False
 
 
 def main():
@@ -81,10 +73,10 @@ def main():
 
         input_board()
         board_draw()
-        game_termination()
         switch_player()
+        game_termination()
+
     print("game over")
-    game_winner()
 
 
 player_no = 1
