@@ -3,18 +3,18 @@ board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
 
 
 def board_draw():
-    print(color(board[0]+"|"+board[1]+"|"+board[2],fore='yellow',back='red'))
-    print(color(board[3]+"|"+board[4]+"|"+board[5],fore='yellow',back='red'))
-    print(color(board[6]+"|"+board[7]+"|"+board[8],fore='yellow',back='red'))
+    print(color(board[0]+"|"+board[1]+"|"+board[2], fore='yellow', back='red'))
+    print(color(board[3]+"|"+board[4]+"|"+board[5], fore='yellow', back='red'))
+    print(color(board[6]+"|"+board[7]+"|"+board[8], fore='yellow', back='red'))
 
 
 def switch_player():
     global player_no
     if player_no == 1:
-        print(color("turn of player o",fore='red'))
+        print(color("turn of player o", fore='red'))
         player_no = 0
     else:
-        print(color("turn of player x",fore='green'))
+        print(color("turn of player x", fore='green'))
         player_no = 1
 
 
@@ -68,8 +68,9 @@ def game_termination():
 
 
 def main():
-    global game_running
 
+    global game_running
+    
     while game_running:
 
         input_board()
